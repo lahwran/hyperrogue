@@ -63,7 +63,7 @@ EX map<cell*, vector<bowpoint>> bowpath_map;
 EX map<int, cell*> target_at;
 
 EX int loading_time() {
-  return style == cbBull ? 3 : 4;
+  return style == cbBull ? 2 : 3;
   }
 
 EX bool blocks(cell *c) {
