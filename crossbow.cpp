@@ -91,12 +91,17 @@ EX int bolt_score(cellwalker cw2) {
 
   if(cw2.at->monst) {
     flagtype attackflags = AF_BOW;
+	bool friendly = (isPrincess(cw2.at->monst) || among(cw2.at->monst, moGolem, moIllusion, moMouse, moFriendlyGhost, moTameBomberbird));
     if(items[itOrbSpeed]&1) attackflags |= AF_FAST;
     if(items[itOrbSlaying]) attackflags |= AF_CRUSH;
     if(items[itCurseWeakness]) attackflags |= AF_WEAK;
-    if(canAttack(cw2.cpeek(), moPlayer, cw2.at, cw2.at->monst, attackflags)) {
+    if(canAttack(cw2.cpeek(), moPlayer, cw2.at, cw2.at->monst, attackflags)
+			&& !friendly) {
       ntotal += 10000; ntotal += 1280 >> d;
       }
+	if(friendly) {
+	  ntotal -= 100;
+	}
     }
 
   for(int t=0; t<cw2.at->type; t++) {

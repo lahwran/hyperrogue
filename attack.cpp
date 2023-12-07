@@ -1101,7 +1101,7 @@ EX bool monsterPushable(cell *c2) {
   }  
 
 EX bool should_switchplace(cell *c1, cell *c2) {
-  if(isPrincess(c2->monst) || among(c2->monst, moGolem, moIllusion, moMouse, moFriendlyGhost))
+  if(isPrincess(c2->monst) || among(c2->monst, moGolem, moIllusion, moMouse, moFriendlyGhost, moTameBomberbird))
     return true;
   
   if(peace::on) return c2->monst;
@@ -1118,7 +1118,7 @@ EX bool switchplace_prevent(cell *c1, cell *c2, struct pcmove& m) {
     if(m.vmsg(miRESTRICTED)) addMessage(XLAT("There is no room for %the1!", c2->monst));
     return true;
     }
-  if(passable(c1, c2, P_ISFRIEND | (c2->monst == moTameBomberbird ? P_FLYING : 0))) return false;
+  if(passable(c1, c2, P_ISFRIEND)) return false;
   if(warningprotection_hit(c2->monst)) return true;
   return false;
   }
