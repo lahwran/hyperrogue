@@ -56,7 +56,7 @@ EX }
 
 EX void glError(const char* GLcall, const char* file, const int line) {
   GLenum errCode = glGetError();
-  if(errCode!=GL_NO_ERROR) {
+  if(errCode!=GL_NO_ERROR && errCode != 1281) {
     println(hlog, hr::format("OPENGL ERROR #%i: in file %s on line %i :: %s",errCode,file, line, GLcall));
     }
   }
@@ -74,7 +74,7 @@ struct glwrap {
 
 void glwrap::act(const char *when) {
   GLenum errCode = glGetError();
-  if(errCode!=GL_NO_ERROR) {
+  if(errCode!=GL_NO_ERROR && errCode != 1281) {
     println(hlog, hr::format("GL error %i %s: %s:%i", errCode, when, msg, line));
     }
   }
