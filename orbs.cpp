@@ -140,30 +140,30 @@ EX void reduceOrbPowers() {
   reduceOrbPower(itOrbTime, cwt.at->land == laCaribbean ? 777 : 150);
   if(invismove && !invisfish) markOrb(itOrbInvis);
   reduceOrbPower(itOrbLightning, 777);
-  reduceOrbPower(itOrbSpeed, 67);
-  reduceOrbPower(itOrbShield, 77);
-  reduceOrbPower(itOrbShell, 150);
+  reduceOrbPower(itOrbSpeed, 500);
+  reduceOrbPower(itOrbShield, 300);
+  reduceOrbPower(itOrbShell, 300);
   reduceOrbPower(itOrbFlash, 777);
-  reduceOrbPower(itOrbWinter, 77);
-  reduceOrbPower(itOrbFire, 77);
+  reduceOrbPower(itOrbWinter, 300);
+  reduceOrbPower(itOrbFire, 300);
   reduceOrbPower(itOrbIllusion, 111);
   reduceOrbPower(itOrbDragon, 111);
   reduceOrbPower(itOrbPsi, 111);
-  reduceOrbPower(itOrbInvis, 77);
-  reduceOrbPower(itOrbAether, 77);
-  reduceOrbPower(itOrbWoods, 100);
-  reduceOrbPower(itOrbDigging, 100);
-  reduceOrbPower(itOrbTeleport, 200);
+  reduceOrbPower(itOrbInvis, 800);
+  reduceOrbPower(itOrbAether, 600);
+  reduceOrbPower(itOrbWoods, 300);
+  reduceOrbPower(itOrbDigging, 300);
+  reduceOrbPower(itOrbTeleport, 400);
   reduceOrbPower(itOrbSpace, 150);
   reduceOrbPower(itOrbMagnetism, 150);
   reduceOrbPowerAlways(itOrbSafety);
   reduceOrbPower(itOrbThorns, 150);
   reduceOrbPower(itOrbWater, 150);
   reduceOrbPower(itOrbAir, 150);
-  reduceOrbPower(itOrbFrog, 77);
-  reduceOrbPower(itOrbDash, 77);
-  reduceOrbPower(itOrbPhasing, 77);
-  reduceOrbPower(itOrbDiscord, 67);
+  reduceOrbPower(itOrbFrog, 900);
+  reduceOrbPower(itOrbDash, 300);
+  reduceOrbPower(itOrbPhasing, 900);
+  reduceOrbPower(itOrbDiscord, 300);
   reduceOrbPower(itOrbSummon, 333);
   reduceOrbPower(itOrbMatter, 333);
   reduceOrbPower(itOrbFish, 57 + 20 * multi::activePlayers());
@@ -171,12 +171,12 @@ EX void reduceOrbPowers() {
   reduceOrbPower(itOrbLove, 777);
   reduceOrbPower(itOrbStunning, 100);
   reduceOrbPower(itOrbLuck, 333);
-  reduceOrbPower(itOrbUndeath, 77);
-  reduceOrbPower(itOrbFreedom, 77);
-  reduceOrbPower(itOrbEmpathy, 77);
+  reduceOrbPower(itOrbUndeath, 300);
+  reduceOrbPower(itOrbFreedom, 300);
+  reduceOrbPower(itOrbEmpathy, 1400);
   markOrb(itOrb37); reduceOrbPower(itOrb37, 333);
-  reduceOrbPower(itOrbBeauty, 77);
-  reduceOrbPower(itOrbEnergy, 77);
+  reduceOrbPower(itOrbBeauty, 300);
+  reduceOrbPower(itOrbEnergy, 600);
   reduceOrbPower(itOrbDomination, 120);
   reduceOrbPower(itOrbSword, 100 + 20 * multi::activePlayers());
   reduceOrbPower(itOrbSword2, 100 + 20 * multi::activePlayers());
@@ -184,14 +184,14 @@ EX void reduceOrbPowers() {
   reduceOrbPower(itOrbNature, 120);
   reduceOrbPower(itOrbRecall, 77);
   reduceOrbPower(itOrbBull, 120);
-  reduceOrbPower(itOrbHorns, 77);
-  reduceOrbPower(itOrbLava, 80);
-  reduceOrbPower(itOrbMorph, 80);
-  reduceOrbPower(itOrbSlaying, 120);
-  reduceOrbPower(itOrbGravity, 120);
+  reduceOrbPower(itOrbHorns, 300);
+  reduceOrbPower(itOrbLava, 300);
+  reduceOrbPower(itOrbMorph, 300);
+  reduceOrbPower(itOrbSlaying, 420);
+  reduceOrbPower(itOrbGravity, 420);
   reduceOrbPower(itOrbChoice, 120);
   reduceOrbPower(itOrbIntensity, 120);
-  reduceOrbPower(itOrbImpact, 120);
+  reduceOrbPower(itOrbImpact, 220);
   reduceOrbPower(itOrbChaos, 120);
   reduceOrbPower(itOrbPlague, 120);
 
@@ -199,9 +199,9 @@ EX void reduceOrbPowers() {
   reduceOrbPower(itOrbSide2, 120);
   reduceOrbPower(itOrbSide3, 120);
   if(cwt.at->land != laWildWest)
-    reduceOrbPower(itRevolver, 6);
+    reduceOrbPower(itRevolver, 300);
 
-  reduceOrbPower(itOrbPurity, 30);
+  reduceOrbPower(itOrbPurity, 300);
   reduceOrbPower(itCurseWeakness, 199);
   reduceOrbPower(itCurseDraining, 199);
   reduceOrbPower(itCurseWater, 199);
@@ -1660,33 +1660,33 @@ EX int orbcharges(eItem it) {
     case itRevolver: //pickup-key
       return 6 - items[itRevolver];
     case itOrbShield:
-      return inv::on ? 30 : 20;
+      return inv::on ? 120 : 60;
     case itOrbDiscord:
-      return inv::on ? 46 : 23;
+      return inv::on ? 126 : 73;
     case itOrbLove:
       return isValentines() ? 31 : 30;
     case itOrbUndeath:
     case itOrbSpeed: //"pickup-speed");
     case itOrbInvis:
     case itOrbAether:
-      return 30;
+      return 80;
     case itOrbGravity:
-      return 45;
+      return 85;
     case itOrbChoice:
       return 60;
     case itOrbIntensity:
-      return inv::on ? 150 : 50;
+      return inv::on ? 150 : 100;
     case itOrbWinter: // "pickup-winter"
-       return inv::on ? 45 : 30;
+       return inv::on ? 65 : 40;
     case itOrbBeauty:
     case itOrbEmpathy:
     case itOrbFreedom:
-      return 40;
+      return 120;
     case itOrbFrog: 
     case itOrbDash:
     case itOrbPhasing:
     case itOrbWoods:
-      return 45;
+      return 75;
     case itOrb37:
     case itOrbEnergy:
       return 50;
@@ -1695,7 +1695,7 @@ EX int orbcharges(eItem it) {
     case itOrbStone:
     case itOrbStunning:
     case itOrbLuck:
-      return 60;
+      return 80;
     case itOrbWater:
     case itOrbMatter:
     case itOrbHorns:
@@ -1714,7 +1714,7 @@ EX int orbcharges(eItem it) {
     case itOrbDigging:
     case itOrbTeleport:
     case itOrbMagnetism:
-      return 77;
+      return 99;
     case itOrbDomination:
       return 90;
     case itOrbSummon:
