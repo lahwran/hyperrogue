@@ -115,7 +115,7 @@ EX bool nomap;
 EX eItem orbToTarget;
 EX eMonster monsterToSummon;
 
-EX int sightrange_bonus = 0;
+EX int sightrange_bonus = 3;
 
 EX string mouseovers;
 
@@ -5079,7 +5079,7 @@ EX bool allowIncreasedSight() {
   if(quotient || !hyperbolic || arcm::in() || arb::in()) return true;
   if(WDIM == 3) return true;
   if(!canmove) return true;
-  return false;
+  return true;
   }
 
 EX bool allowChangeRange() {
@@ -5090,7 +5090,7 @@ EX bool allowChangeRange() {
   if(racing::on) return true;
   if(arcm::in() || arb::in()) return true;
   if(WDIM == 3) return true;
-  return false;
+  return true;
   }
 
 EX purehookset hooks_drawmap;

@@ -1867,7 +1867,7 @@ string solhelp() {
 EX void menuitem_sightrange_bonus(char c) {
   dialog::addSelItem(XLAT("sight range bonus"), its(sightrange_bonus), c);
   dialog::add_action([]{
-    dialog::editNumber(sightrange_bonus, -5, allowIncreasedSight() ? 3 : 0, 1, 0, XLAT("sight range"), 
+    dialog::editNumber(sightrange_bonus, -5, allowIncreasedSight() ? 4 : 0, 1, 3, XLAT("sight range"), 
       XLAT("Roughly 42% cells are on the edge of your sight range. Reducing "
       "the sight range makes HyperRogue work faster, but also makes "
       "the game effectively harder."));

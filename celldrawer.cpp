@@ -2877,7 +2877,7 @@ void celldrawer::draw() {
       return;
       }                  
     
-    if(!buggyGeneration && c->mpdist > 8 && !cheater && !autocheat) return; // not yet generated
+    if(!buggyGeneration && c->mpdist > 12 && !cheater && !autocheat) return; // not yet generated
     
     #if CAP_SHAPES
     ct6 = ctof(c);

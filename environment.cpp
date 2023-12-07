@@ -75,7 +75,7 @@ EX vector<cell*> pathqm;
 /** which hex snakes are there */
 EX set<int> snaketypes;
 
-EX int gamerange_bonus = 0;
+EX int gamerange_bonus = 1;
 EX int gamerange() { return getDistLimit() + gamerange_bonus; }
 
 // pathdist begin

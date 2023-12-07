@@ -23,7 +23,7 @@ EX int lastexplore;
 EX bool randomPatternsMode = false;
 EX int randompattern[landtypes];
 
-EX int genrange_bonus = 0;
+EX int genrange_bonus = 3;
 
 EX bool chaosUnlocked = false;
 EX bool chaosAchieved = false;
